@@ -11,5 +11,5 @@ Master Sheet - User Id, FirstName, Last Name, Email, Activated, Most Recent Logi
 1>Run query in Master_Sheet.sql against edxapp DB. You can change the course id if required. 
 2>Export Returned Data into Excel and copy all the values in it to your clipboard.
 3>Open up the Excel_output_sheet.xls and paste all values in it to appropriate column. This will update the pivot table calculations that are on the right hand side. 
-4>Send the sheet to dailystats@mckinseyacademy.com with Subject Line - Strat Report - Todays date. 
+4>Send the sheet to dailystats@mckinseyacademy.com with Subject Line - <Course Name> Report - <Todays date>
 
