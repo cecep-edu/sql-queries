@@ -1,5 +1,3 @@
-/* MASTER SHEET */
-
 SELECT au.id as "User ID", au.username as "Username", 
 au.first_name as "First Name", 
 au.last_name as "Last Name", au.email as "Email", 
@@ -7,7 +5,13 @@ sce.is_active as "Activated",
 DATE_FORMAT(au.last_login, '%c/%d/%Y') as "Most Recent Login", 
 DATE_FORMAT(au.date_joined, '%c/%d/%Y') as "Activation Date", 
 DATE_FORMAT(sce.created, '%c/%d/%Y') as "Enrollment Date", 
-(Select count(*) from api_manager_coursemodulecompletion as api where api.user_id = au.id AND api.stage IS null) as "Exercise Engagement"   
+(
+	Select count(*) from api_manager_coursemodulecompletion api 
+	where api.user_id = au.id 
+	AND api.stage IS null 
+	AND api.course_id = "slashes:AcademyMMP+STRAT+Sept2014"
+) 
+as "Exercise Engagement"   
 FROM student_courseenrollment as sce
 left join auth_user as au
 ON au.id = sce.user_id
