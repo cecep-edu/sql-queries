@@ -9,7 +9,7 @@ DATE_FORMAT(sce.created, '%c/%d/%Y') as "Enrollment Date",
 	Select count(*) from api_manager_coursemodulecompletion api 
 	where api.user_id = au.id 
 	AND api.stage IS null 
-	AND api.course_id = "slashes:AcademyMMP+STRAT+Sept2014"
+	AND api.course_id = "AcademyMMP/STRAT/Sept2014"
 ) 
 as "Exercise Engagement"   
 FROM student_courseenrollment as sce
