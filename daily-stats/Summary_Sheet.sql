@@ -23,7 +23,7 @@ WHERE sc.course_id = "AcademyMMP/STRAT/Sept2014")
 UNION ALL
 
 /* TOTAL ENGAGED STUDENTS IN COURSE */
-SELECT count(DISTINCT user_id) FROM api_manager_coursemodulecompletion 
+SELECT count(DISTINCT user_id) FROM progress_coursemodulecompletion 
 WHERE course_id = "slashes:AcademyMMP+STRAT+Sept2014" 
 AND user_id NOT IN
 (Select sc.user_id from student_courseaccessrole as sc 
