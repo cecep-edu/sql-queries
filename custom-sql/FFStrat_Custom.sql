@@ -33,3 +33,4 @@ AND au.id NOT IN
 WHERE sc.course_id = "FF/STRATEGYFF/2015")
 ORDER BY au.id
 
+
